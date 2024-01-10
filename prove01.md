@@ -5,11 +5,11 @@ file completed or uncompleted in a public file sharing site.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**: 
+**Name**: Spencer Damiano
 
 **Section**:
 
-**Teacher**:
+**Teacher**: Brother Macbeth
 
 ## Question 1 (5 points)
 
@@ -19,11 +19,11 @@ Identify (with an "X") whether each statement is either a proposition or non-pro
 |:-:|:-:|:-:|
 |I got an A in CSE 280|X||
 |Hello!||X|
-|The hose has a leak.|||
-|The wind speed is greater than 30 miles per hour.|||
-|Close the window.|||
-|The window is closed.|||
-|Are you graduating this semester?|||
+|The hose has a leak.|X||
+|The wind speed is greater than 30 miles per hour.|X||
+|Close the window.||X|
+|The window is closed.|X||
+|Are you graduating this semester?||X|
 
 ## Question 2 (28 points)
 
