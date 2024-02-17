@@ -5,11 +5,11 @@ file completed or uncompleted in a public file sharing site.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**:
+**Name**: Spencer Damiano
 
-**Section**:
+**Section**: CSE 280 02
 
-**Teacher**:
+**Teacher**: Macbeth
 
 ## Question 1 (5 points)
 
@@ -19,11 +19,11 @@ Fill in the adjacency table below for the graph below:
 
 |Vertex|Adjacent Verticies|
 |:-:|:-:|
-|0||
-|1||
-|2||
-|3||
-|4||
+|0|1,4,3,2|
+|1|0,2,3,4|
+|2|0,1,3|
+|3|2,0,1,4|
+|4|0,1,3|
 
 ## Question 2 (8 points)
 
@@ -33,10 +33,10 @@ The list of 9 graphs below have 4 pairs of isomorphic graphs.  Find the 4 pairs.
 
 |#|Isomorphic Pairs|
 |:-:|:-:|
-|1st Pair||
-|2nd Pair||
-|3rd Pair||
-|4th Pair||
+|1st Pair|a,f|
+|2nd Pair|c,g|
+|3rd Pair|d,e|
+|4th Pair|b,i|
 
 Source: Question adapted from Applied Discrete Structures by Alan Doerr & Kenneth Levasseur which is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States License.
 
@@ -47,15 +47,24 @@ Write python code to create an adjacency table for the undirected graph below.  
 ![](prove06_graph3.png)
 
 ```python
-adjacency_table = None # Add your code here
+adjacency_table = {'A': ['B','C'],
+                   'B': ['A','C'],
+                   'C': ['A','B','D'],
+                   'D': ['C','E','F'],
+                   'E': ['D','F'],
+                   'F': ['D','E']
+                   } # Add your code here
 
 def find_neighbors(vertex, adjaceny_table):
     # Add your code here
-    return None
+    return adjacency_table[vertex]
 
 def is_neighbor(vertex1, vertex2, adjacency_table):
     # Add your code here
-    return None
+    if vertex2 in adjacency_table[vertex1]:
+        return True
+    else:
+        return False
 
 print(find_neighbors('A', adjacency_table)) # should print ['B', 'C']
 print(find_neighbors('D', adjacency_table)) # should print ['C', 'E', 'F']
@@ -71,9 +80,9 @@ Determine if the graph below has an Euler Circuit.  If it does, then write down 
 
 |Graph|Euler Cycle|
 |:-:|:-:|
-|![](prove06_graph4.png)||
-|![](prove06_graph5.png)||
-|![](prove06_graph6.png)||
+|![](prove06_graph4.png)|No Euler|
+|![](prove06_graph5.png)|6,1,2,3,4,5,6|
+|![](prove06_graph6.png)|2,9,10,3,4,8,7,6,5,1,2,6,7,3,2|
 
 ## Question 5 (16 points)
 
@@ -85,14 +94,14 @@ Complete the tables below to identify the final state (per the FSM diagram) and 
 
 |Input|Final State|Accepting (Yes/No)|
 |:-:|:-:|:-:|
-|00101|||
-|011100|||
-|01111|||
-|0101|||
-|00000|||
-|11111|||
-|11100|||
-|10011|||
+|00101|D|No|
+|011100|C|Yes|
+|01111|B|No|
+|0101|D|No|
+|00000|C|Yes|
+|11111|D|No|
+|11100|D|No|
+|10011|D|No|
 
 **Part 2**
 
@@ -100,14 +109,14 @@ Complete the tables below to identify the final state (per the FSM diagram) and 
 
 |Input|Final State|Accepting (Yes/No)|
 |:-:|:-:|:-:|
-|00101|||
-|011100|||
-|01111|||
-|0101|||
-|00000|||
-|11111|||
-|11100|||
-|10011|||
+|00101|S5|No|
+|011100|S2|No|
+|01111|S4|Yes|
+|0101|S3|No|
+|00000|S5|No|
+|11111|S4|Yes|
+|11100|S2|No|
+|10011|S4|Yes|
 
 ## Question 6 (4 points)
 
@@ -115,4 +124,4 @@ Describe the bit string recognized/accepted by the following FSM:
 
 ![](prove06_graph9.png)
 
-Answer: 
+Answer: A string that ended in 1 would be accepted every time. Any sting ending in 0 would be rejected.
