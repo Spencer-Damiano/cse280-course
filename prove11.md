@@ -5,11 +5,11 @@ file completed or uncompleted in a public file sharing site.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**:
+**Name**: Spencer Damiano
 
-**Section**:
+**Section**: CSE 280 02
 
-**Teacher**:
+**Teacher**: Macbeth
 
 ## Question 1 (9 points)
 
@@ -29,8 +29,8 @@ Answer: 1
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-||||
-||||
+|39|501|462|
+|462|39||
 ||||
 
 Answer: 
