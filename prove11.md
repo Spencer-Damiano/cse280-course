@@ -20,8 +20,8 @@ Find the $gcd$ for each of the following by hand using Eulid's Algorithm  Show y
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
 |43|57|14|
-|14|43|1|
-|1|14|0|
+|57|14|1|
+|14|1|0|
 
 Answer: 1
 
@@ -29,9 +29,9 @@ Answer: 1
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-|39|501|462|
-|462|39||
-||||
+|39|501|33|
+|501|33|6|
+|6|3|0|
 
 Answer: 3
 
