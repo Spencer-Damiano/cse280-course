@@ -7,7 +7,7 @@ file completed or uncompleted in a public file sharing site.
 
 **Name**: Spencer Damiano
 
-**Section**: 280 02
+**Section**: CSE 280 02
 
 **Teacher**: Macbeth
 
@@ -29,10 +29,9 @@ Answer: 1
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-|39|501|33|
-|39|33|6|
-|33|6|3|
-|6|3|0|
+|39|501|462|
+|462|39||
+||||
 
 Answer: 3
 
