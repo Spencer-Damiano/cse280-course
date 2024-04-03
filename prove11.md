@@ -5,11 +5,11 @@ file completed or uncompleted in a public file sharing site.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**:
+**Name**: Spencer Damiano
 
-**Section**:
+**Section**: 280 02
 
-**Teacher**:
+**Teacher**: Macbeth
 
 ## Question 1 (9 points)
 
@@ -29,31 +29,34 @@ Answer: 1
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-||||
-||||
-||||
+|39|501|33|
+|39|33|6|
+|33|6|3|
+|6|3|0|
 
-Answer: 
+Answer: 3
 
 **Problem C**: $gcd(110,765)$
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-||||
-||||
-||||
+|765|110|105|
+|110|105|5|
+|105|5|0|
 
-Answer: 
+Answer: 5
 
 **Problem D**: $gcd(493,899)$
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-||||
-||||
-||||
+|899|493|406|
+|493|406|87|
+|406|87|58|
+|87|58|29|
+|58|29|0|
 
-Answer: 
+Answer: 29
 
 ## Question 2 (10 points)
 
@@ -62,20 +65,20 @@ Find the $gcd$ for the first three problems from Question 1 using the Extended E
 |Problem|$gcd = s*x + t*y$|
 |:-:|:-:|
 |$gcd(43,57)$|$1 = 4*43 - 3*57$|
-|$gcd(39,501)$||
-|$gcd(110,765)$||
+|$gcd(39,501)$|$3 = -77(39) + 6(501)$|
+|$gcd(110,765)$|5 = 7(110) - 1(765)$|
 
 
 ## Question 3 (8 points)
 
 Find the multiplicative inverse for $x \text{ mod } n$ in the table below.  These numbers are smaller so you don't need to use the Extended Euclidean Algorithm to solve.  You can check your answers by verifying that $sx \text{ mod } n = 1$ where $s$ is the multiplicative inverse you calculated.
 
-|$x$|$n$|Multiplicative Inverse|
-|:-:|:-:|:-:|
-|2|7||
-|5|11||
-|7|20||
-|3|13||
+| $x$ | $n$ | Multiplicative Inverse |
+|:---:|:---:|:----------------------:|
+|  2  |  7  |           4            |
+|  5  | 11  |           9            |
+|  7  | 20  |           3            |
+|  3  | 13  |           9            |
 
 ## Question 4 (9 points)
 Use the Extended Euclidean Algorithm to find the multiplicative inverse of $83 \text{ mod } 96$.  You can check your answer by verifying that $s*83 \text{ mod } 96 = 1$ where $s$ is the multiplicative inverse you calculated.  
@@ -83,9 +86,9 @@ Use the Extended Euclidean Algorithm to find the multiplicative inverse of $83 \
 In your answer, provide both the linear combination of $1 = s*83 + t*96$ and the multiplicative inverse derived from it.
 
 Answers:
-* $s = $
-* $t = $
-* Multiplicative Inverse = 
+* $s = -37$
+* $t = 32$
+* Multiplicative Inverse = 59
 
 ## Question 5 (14 points)
 
@@ -105,15 +108,15 @@ def gcd_ext(x,y):
         (old_s, s) = (s, old_s - q * s)
         (old_t, t) = (t, old_t - q * t)
     return (old_r, old_s, old_t)
-``````
+```
 
 Answers:
 * $p = 137$
 * $q = 211$
-* $N = $
-* $\phi = $
-* $e = $
-* $d = $
+* $N = 28907$
+* $\phi = 28560$
+* $e = 65537$
+* $d = 3953$
 
 ### Part 2
 
@@ -123,16 +126,21 @@ The values of $N$ and $e$ are the public keys.  The value of $d$ is the private 
 # Put your values from Part 1
 p = 137
 q = 211
-e = 
-N = 
-phi = 
-d = 
+e = 65537
+N = 28907
+phi = 28560
+d = 3953
 
+# Message to be encrypted
 m = 5645
-# Write code to encrypt 'm' and display it
 
-# Write code to decrypt it back again and display it.   It should be 5645 again.
+# Encrypt the message
+c = pow(m, e, N)  # Encrypted message
+print(f"Encrypted message: {c}")
 
+# Decrypt the message
+decrypted_m = pow(c, d, N)  # Decrypted message, should be equal to m
+print(f"Decrypted message: {decrypted_m}")
 ```
 
   
